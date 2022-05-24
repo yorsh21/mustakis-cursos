@@ -1,0 +1,50 @@
+{
+    "fields": [
+        {
+            "name": "presence",
+            "type": "boolean"
+        },
+        {
+            "name": "score",
+            "type": "integer"
+        },
+        {
+            "name": "specific_date",
+            "type": "datetime"
+        },
+        {
+            "name": "block_grade_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "division_user_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "block_grade_id",
+            "references": "id",
+            "on": "block_grades",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "division_user_id",
+            "references": "id",
+            "on": "users",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "block_grade",
+            "type": "belongsTo",
+            "class": "App\\BlockGrade"
+        },
+        {
+            "name": "division_user",
+            "type": "belongsTo",
+            "class": "App\\DivisionUser"
+        }
+    ]
+}

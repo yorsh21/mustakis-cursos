@@ -1,0 +1,281 @@
+// Clear layout on print mode
+@media print {
+  nav.navbar-static-side {
+    display: none;
+  }
+  body { overflow: visible !important; }
+
+  #page-wrapper {
+    margin: 0;
+  }
+}
+
+.panel-default {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.img-circle {
+    width: 48px;
+    height: 48px;
+}
+
+.table-announcement{
+    border: 1px solid gray;
+}
+
+.wrapper-filters {
+    padding-bottom: 0px !important;
+}
+
+/*****************************************/
+/*************** Grades ******************/
+/*****************************************/
+
+.table-announcement{
+    border: 1px solid gray;
+}
+
+.content-post{
+    background: #e6e6e6;
+}
+
+.post{
+    border-radius:0.7%;
+}
+
+.grade-open{
+    color: #2ca02c;
+}
+
+.grade-close{
+    color: #ff2222;
+}
+.name-workshop{
+    font-size:medium;
+    color: #0a6aa1;
+}
+
+.name-workshop:hover{
+    color: #2ca02c;
+}
+
+.tag_disabled{
+    pointer-events: none;
+    cursor: default;
+}
+
+.text-error{
+    color:#B40404;
+
+}
+
+.breadcrumb-container .breadcrumb {
+    padding: 20px;
+}
+
+#view-course {
+    margin-top: 20px;
+}
+
+#view-course h2 {
+    margin-bottom: 10px;
+}
+
+#view-course h3 {
+    margin-top: 30px;
+}
+
+#view-course .margin-into {
+    margin-bottom: 30px;
+}
+
+
+#about_select_workshop{
+
+    height:8em;
+    resize: none;
+}
+
+.right-down {
+    position: relative;
+    width: 100%;
+}
+
+.right-down a {
+    position: absolute;
+    right: 2px;
+}
+
+.btn-disabled{
+    pointer-events:none;
+}
+
+
+.btn-disabled {
+    pointer-events: none;
+}
+
+.btn-disabled-default:hover{
+    cursor:default;
+}
+
+.first-comment{
+    margin-right:5%;
+    margin-left:-5%;
+    width:100%;
+}
+
+.textarea{
+    resize:none;
+}
+
+.choose-avatar {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#letter_motivational {
+    width:60%;
+}
+
+.score-presence input {
+    width: 100%;
+}
+
+#dropdownGrades {
+    float: right;
+}
+
+.message button {
+    color: #337ab7;
+}
+
+.message button:focus, .message button:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-approve ul {
+    min-width: 120px;
+}
+
+.dropdown-approve li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-approve li:hover {
+    font-weight: bold;
+}
+
+.td-weighings {
+    vertical-align: middle !important;
+}
+
+#non-list {
+    color: #1cc09f;
+}
+
+/* Formulario de alumno*/
+
+#non-list:hover {
+    text-decoration: underline;
+}
+
+#div_school_commune {
+    border: 1px solid #1cc09f;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+#file-size {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* DataTables */
+
+#view-course .dataTables_wrapper {
+    overflow-x: scroll;
+}
+
+
+/* Videos */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.social-footer {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.textarea-full {
+    width: 65% !important;
+}
+
+
+/* Notificaciones */
+
+.row-strong > td {
+    font-weight: bold !important;
+}
+
+
+/* Certificaciones */
+
+#design-background {
+    display: none;
+}
+
+#certificate-background {
+    display: block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid rgba(180, 180, 180, .8);
+}
+
+.certificate-draggable {
+    width: 50%;
+    position: absolute;
+    cursor: all-scroll;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(150, 150, 150, .8);
+    text-align: center;
+}
+
+.index-background-certificate > img {
+    width: 100%;
+}
+
+.fields-n {
+    margin-bottom: 8px;
+}
+
+
+#help-section {
+    img {
+        max-width: 80%;
+        border: 1px solid rgba(77, 77, 77, .5);
+    }
+}
+
+
+/* Vista Formulario de Postulación Administrador */
+
+.sub-survey {
+    padding-left: 30px !important;
+}
+
+.form-space select {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,60 @@
+{
+    "fields": [
+        {
+            "name": "firstname",
+            "type": "string"
+        },
+        {
+            "name": "lastname",
+            "type": "string"
+        },
+        {
+            "name": "email",
+            "type": "string"
+        },
+        {
+            "name": "username",
+            "type": "string"
+        },
+        {
+            "name": "password",
+            "type": "string"
+        },
+        {
+            "name": "birth_date",
+            "type": "date"
+        },
+        {
+            "name": "type",
+            "type": "tinyint"
+        },
+        {
+            "name": "rut",
+            "type": "string"
+        },
+        {
+            "name": "genere",
+            "type": "select",
+            "options": {
+                "1": "Masculino",
+                "2": "Femenino"
+            }
+        },
+        {
+            "name": "nationality",
+            "type": "string"
+        },
+        {
+            "name": "phone_number",
+            "type": "string"
+        },
+        {
+            "name": "phone_number2",
+            "type": "string"
+        },
+        {
+            "name": "id",
+            "type": "integer#unsigned"
+        }
+    ]
+}

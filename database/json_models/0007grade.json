@@ -1,0 +1,69 @@
+{
+    "fields": [
+        {
+            "name": "capacity",
+            "type": "integer"
+        },
+        {
+            "name": "type",
+            "type": "string"
+        },
+        {
+            "name": "start_date",
+            "type": "datetime"
+        },
+        {
+            "name": "end_date",
+            "type": "datetime"
+        },
+        {
+            "name": "school_workshop_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "period_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "school_workshop_id",
+            "references": "id",
+            "on": "school_workshops",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "period_id",
+            "references": "id",
+            "on": "periods",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "school_workshop",
+            "type": "belongsTo",
+            "class": "App\\SchoolWorkshop"
+        },
+        {
+            "name": "period",
+            "type": "belongsTo",
+            "class": "App\\Period"
+        },
+        {
+            "name": "block_grades",
+            "type": "hasMany",
+            "class": "App\\BlockGrade"
+        },
+        {
+            "name": "division_users",
+            "type": "hasMany",
+            "class": "App\\DivisionUser"
+        },
+        {
+            "name": "posts",
+            "type": "hasMany",
+            "class": "App\\Post"
+        }
+    ]
+}

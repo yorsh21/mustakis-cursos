@@ -1,0 +1,31 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "general",
+            "type": "boolean"
+        },
+        {
+            "name": "block_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "block_id",
+            "references": "id",
+            "on": "blocks",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "block",
+            "type": "belongsTo",
+            "class": "App\\Block"
+        }
+    ]
+}

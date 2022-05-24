@@ -1,0 +1,51 @@
+{
+    "fields": [
+        {
+            "name": "start_date",
+            "type": "datetime"
+        },
+        {
+            "name": "end_date",
+            "type": "datetime"
+        },
+        {
+            "name": "period_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "school_workshop_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "school_workshop_id",
+            "references": "id",
+            "on": "school_workshops",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "period_id",
+            "references": "id",
+            "on": "periods",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "period",
+            "type": "belongsTo",
+            "class": "App\\Period"
+        },
+        {
+            "name": "school_workshops",
+            "type": "belongsTo",
+            "class": "App\\SchoolWorkshop"
+        },
+        {
+            "name": "requests",
+            "type": "hasMany",
+            "class": "App\\Request"
+        }
+    ]
+}

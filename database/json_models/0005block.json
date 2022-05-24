@@ -1,0 +1,45 @@
+{
+    "fields": [
+        {
+            "name": "description",
+            "type": "text"
+        },
+        {
+            "name": "evaluation_name",
+            "type": "string"
+        },
+        {
+            "name": "evaluation_Type",
+            "type": "string"
+        },
+        {
+            "name": "school_workshop_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "school_workshop_id",
+            "references": "id",
+            "on": "school_workshops",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "school_workshop",
+            "type": "belongsTo",
+            "class": "App\\SchoolWorkshop"
+        },
+        {
+            "name": "block_grades",
+            "type": "hasMany",
+            "class": "App\\BlockGrade"
+        },
+        {
+            "name": "materials",
+            "type": "hasMany",
+            "class": "App\\Material"
+        }
+    ]
+}

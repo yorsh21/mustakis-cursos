@@ -1,0 +1,52 @@
+{
+    "fields": [
+        {
+            "name": "aptitude_score",
+            "type": "integer"
+        },
+        {
+            "name": "grade_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "user_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "grade_id",
+            "references": "id",
+            "on": "grades",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "user_id",
+            "references": "id",
+            "on": "users",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "grade",
+            "type": "belongsTo",
+            "class": "App\\Grade"
+        },
+        {
+            "name": "user",
+            "type": "belongsTo",
+            "class": "App\\User"
+        },
+        {
+            "name": "posts",
+            "type": "hasMany",
+            "class": "App\\Post"
+        },
+        {
+            "name": "block_grade_users",
+            "type": "hasMany",
+            "class": "App\\BlockGradeUser"
+        }
+    ]
+}

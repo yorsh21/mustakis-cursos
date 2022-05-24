@@ -1,0 +1,55 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "type": "text"
+        },
+        {
+            "name": "code",
+            "type": "string"
+        },
+        {
+            "name": "requirement_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "requirement_id",
+            "references": "id",
+            "on": "school_workshops",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "requirement",
+            "type": "belongsTo",
+            "class": "App\\SchoolWorkshop"
+        },
+        {
+            "name": "dependent_school_workshops",
+            "type": "hasMany",
+            "class": "App\\SchoolWorkshop"
+        },
+        {
+            "name": "blocks",
+            "type": "hasMany",
+            "class": "App\\Block"
+        },
+        {
+            "name": "postulations",
+            "type": "hasMany",
+            "class": "App\\Postulation"
+        },
+        {
+            "name": "grades",
+            "type": "hasMany",
+            "class": "App\\Grade"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "address",
+            "type": "string"
+        },
+        {
+            "name": "contact_phone",
+            "type": "string"
+        },
+        {
+            "name": "contact_mail",
+            "type": "string"
+        },
+        {
+            "name": "user_in_charge_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "commune_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "user_in_charge_id",
+            "references": "id",
+            "on": "users",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "commune_id",
+            "references": "id",
+            "on": "communes",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "user_in_charge",
+            "type": "belongsTo",
+            "class": "App\\User"
+        },
+        {
+            "name": "commune",
+            "type": "belongsTo",
+            "class": "App\\Commune"
+        },
+        {
+            "name": "rooms",
+            "type": "hasMany",
+            "class": "App\\Room"
+        }
+    ]
+}

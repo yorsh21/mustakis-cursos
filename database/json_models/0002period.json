@@ -1,0 +1,32 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "type": "text"
+        },
+        {
+            "name": "start_date",
+            "type": "datetime"
+        },
+        {
+            "name": "end_date",
+            "type": "datetime"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "postulations",
+            "type": "hasMany",
+            "class": "App\\Postulation"
+        },
+        {
+            "name": "grades",
+            "type": "hasMany",
+            "class": "App\\Grade"
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "fields": [
+        {
+            "name": "comment",
+            "type": "string"
+        },
+        {
+            "name": "start_date",
+            "type": "datetime"
+        },
+        {
+            "name": "end_date",
+            "type": "datetime"
+        },
+        {
+            "name": "block_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "grade_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "room_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "block_id",
+            "references": "id",
+            "on": "blocks",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "grade_id",
+            "references": "id",
+            "on": "grades",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "room_id",
+            "references": "id",
+            "on": "rooms",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "block",
+            "type": "belongsTo",
+            "class": "App\\Block"
+        },
+        {
+            "name": "grade",
+            "type": "belongsTo",
+            "class": "App\\Grade"
+        },
+        {
+            "name": "room",
+            "type": "belongsTo",
+            "class": "App\\Room"
+        },
+        {
+            "name": "block_grade_users",
+            "type": "hasMany",
+            "class": "App\\BlockGradeUser"
+        }
+    ]
+}

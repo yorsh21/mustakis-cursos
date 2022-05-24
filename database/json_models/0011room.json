@@ -1,0 +1,42 @@
+{
+    "fields": [
+        {
+            "name": "capacity",
+            "type": "integer"
+        },
+        {
+            "name": "type",
+            "type": "select",
+            "options": {
+                "0": "Mesas individuales",
+                "1": "Mesas compartidas",
+                "2": "Sala sillas universitarias",
+                "3": "Sala con computadores"
+            }
+        },
+        {
+            "name": "campus_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "campus_id",
+            "references": "id",
+            "on": "campus",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "campus",
+            "type": "belongsTo",
+            "class": "App\\Campus"
+        },
+        {
+            "name": "block_grades",
+            "type": "hasMany",
+            "class": "App\\BlockGrade"
+        }
+    ]
+}

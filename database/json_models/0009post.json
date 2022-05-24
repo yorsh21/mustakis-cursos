@@ -1,0 +1,70 @@
+{
+    "fields": [
+        {
+            "name": "title",
+            "type": "string"
+        },
+        {
+            "name": "body",
+            "type": "text"
+        },
+        {
+            "name": "forum",
+            "type": "string"
+        },
+        {
+            "name": "division_user_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "parent_id",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "grade_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "division_user_id",
+            "references": "id",
+            "on": "division_users",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "parent_id",
+            "references": "id",
+            "on": "posts",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "grade_id",
+            "references": "id",
+            "on": "grades",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "division_user",
+            "type": "belongsTo",
+            "class": "App\\DivisionUser"
+        },
+        {
+            "name": "post",
+            "type": "belongsTo",
+            "class": "App\\Post"
+        },
+        {
+            "name": "grade",
+            "type": "belongsTo",
+            "class": "App\\Grade"
+        },
+        {
+            "name": "comments",
+            "type": "hasMany",
+            "class": "App\\Post"
+        }
+    ]
+}
